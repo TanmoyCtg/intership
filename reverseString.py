@@ -1,21 +1,15 @@
 
-'''
+
 # solution 1
 def reverseString(str):
 	
 	a = str[::-1] 
 	return a
 	
-'''
-
-'''
 # solution 2
-
 def reverse(string):
 	return "".join(reversed(string))
-		
-'''
-	
+			
 # solution 3
 
 def reverse_string(s):
