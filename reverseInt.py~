@@ -1,0 +1,14 @@
+import math
+
+def reverseInt(n):
+
+	l = list(n)
+	r = "".join(reversed(l))
+	i = int(r)
+	return i 	
+
+if __name__ == "__main__":
+
+	i = input("Input: ")
+	print(reverse_int(i))
+	#print(reverseInt(i))
