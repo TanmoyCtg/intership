@@ -2,18 +2,26 @@
 
 {%block content%}
 
-<form action="">
+<!-- <form action="" method="POST">
+    {% csrf_token%}
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email">
+      <input type="email" class="form-control" id="email" name="email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
+      <input type="password" class="form-control" id="pwd" name="password">
     </div>
     <div class="checkbox">
-      <label><input type="checkbox"> Remember me</label>
+      <label><input type="checkbox" name="checkbox"> Remember me</label>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
-  </form> 
+  </form>  -->
+
+  <form action="" method="POST">
+    {% csrf_token%}
+    <!-- here form is came from views.py. it's a object of a TestForm class -->
+    {{form}} 
+    <input type="submit" value="Submit">
+  </form>
 {% endblock%}
