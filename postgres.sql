@@ -70,6 +70,16 @@ SELECT * FROM weather INNER JOIN cities ON (weather.city = cities.name);
 SELECT *
     FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
 
+alter table console_games ADD COLUMN global_sales float8;
+
+select * from console_games;
+
+UPDATE console_games SET global_sales = na_sales+ eu_sales + jp_sales + other_sales;
+
+ALTER TABLE console_games ADD COLUMN na_sales_percent float8;
+
+UPDATE console_games SET na_sales_percent = na_sales/global_sales * 100
+ WHERE global_sales > 0;
 
 
 

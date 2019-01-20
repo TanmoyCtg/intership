@@ -41,6 +41,36 @@ CREATE TABLE cities (
 DROP TABLE tablename;
 
 
+insert into weather values ('San Francisco', 46, 50, 0.25, '1994-11-27');
+
+insert into cities values ('San Francisco', '(-194.0, 53.0)');
+
+select * from weather;
+
+select * from weather ORDER BY city;
+
+INSERT INTO weather (tarik, city, temp_hi, temp_lo)
+    VALUES ('1994-11-29', 'Hayward', 54, 37);
+
+
+-- distinct removes duplicate row 
+select distinct city from weather;
+
+select distinct city from weather order by city;
+
+-- Join Query
+
+SELECT weather.city, weather.temp_lo, weather.temp_hi,
+       weather.prcp, weather.tarik, cities.location
+    FROM weather, cities
+    WHERE cities.name = weather.city;
+
+SELECT * FROM weather INNER JOIN cities ON (weather.city = cities.name);
+
+SELECT *
+    FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
+
+
 
 
 
